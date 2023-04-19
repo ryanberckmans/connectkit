@@ -1,7 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
-import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
-import packageJson from './package.json';
+import { createTransformer as createStyledComponentsTransformer } from 'typescript-plugin-styled-components';
+import packageJson from './package.json' assert { type: 'json' };
 
 const styledComponentsTransformer = createStyledComponentsTransformer({
   displayName: true,
